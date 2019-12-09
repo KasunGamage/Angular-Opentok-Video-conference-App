@@ -1,0 +1,16 @@
+<div *ngIf="session" class="full-height">
+  <div class="self-video" [hidden]="showMySelf">
+    <app-publisher [session]="session" [publisherEmail]="publisherEmail"></app-publisher>
+  </div>
+  <div style="display: block;" #subcriberDiv></div>
+
+  <div class="loading-indicator" *ngIf="showSpinner">
+    <mat-progress-spinner
+      class="example-margin"
+      [color]="color"
+      [mode]="mode"
+      #spinner
+    >
+    </mat-progress-spinner>
+  </div>
+</div>

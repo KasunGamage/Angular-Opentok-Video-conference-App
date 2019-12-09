@@ -1,0 +1,34 @@
+<!-- Toolbar -->
+<div #toolbar class="toolbar" role="banner">
+  <img
+    alt="DC2Vue Logo"
+    src="https://dc2vue-rcp01-dev.azurewebsites.net/assets/media/logos/logo-light.png"
+  />
+  <span>Virtual Conference</span>
+  <div style="padding-left: 10px;"> {{ formattedTimeElapsed }}</div>
+  <div class="spacer"></div>
+  <div class="example-button-row" *ngIf="!isButtonsHide">
+    <button mat-stroked-button [color]="videoEnabledBtnColor" (click)="startStopVideo()">
+      <mat-icon *ngIf="!videoEnabled">videocam</mat-icon>
+      <mat-icon *ngIf="videoEnabled">videocam_off</mat-icon>
+      <span>{{ videoEnabledTxt }} </span>
+    </button>
+    <button mat-stroked-button [color]="audioEnabledBtnColor"(click)="muteAndUnMuteAudio()">
+      <mat-icon *ngIf="!audioEnabled">mic</mat-icon>
+      <mat-icon *ngIf="audioEnabled">mic_off</mat-icon>
+      <span>{{ audioEnabledTxt }}</span>
+    </button>
+    <button mat-stroked-button [color]="showMySelfBtnColor" (click)="showHideSelfVideo()">
+      <mat-icon *ngIf="!showMySelf">visibility</mat-icon>
+      <mat-icon *ngIf="showMySelf">visibility_off</mat-icon>
+      <span>{{ showMySelfTxt }}</span>
+    </button>
+    <button mat-stroked-button (click)="leaveConvo()">
+      <mat-icon>stop</mat-icon>
+      <span>Leave Call</span>
+    </button>
+
+  </div>
+</div>
+
+<router-outlet></router-outlet>
