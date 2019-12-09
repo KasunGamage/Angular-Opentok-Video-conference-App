@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/join/:sessionId/:Token/:userEmail`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -13,15 +13,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use below commands to do the specific build.
-
-* ng build --configuration=local
-* ng build --configuration=dev
-* ng build --configuration=prod
-* ng build --configuration=uat
-
-In case if app hosted route is different => https://dc2vue-rcp01-dev.azurewebsites.net/virtual-health/
-
-* ng build --configuration=dev --deploy-url /virtual-health/ 
 
 ## Running unit tests
 
