@@ -137,7 +137,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     if (this.callTimer && sessionEndedByUser) {
       clearInterval(this.callTimer);
     } else {
-      if (this.callTimer && this.sharedService.participantCount  === 0) {
+      if (this.callTimer && this.sharedService.participantCount === 0) {
         clearInterval(this.callTimer);
       }
     }

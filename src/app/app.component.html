@@ -2,12 +2,12 @@
 <div #toolbar class="toolbar" role="banner">
   <img
     alt="DC2Vue Logo"
-    src="https://dc2vue-rcp01-dev.azurewebsites.net/assets/media/logos/logo-light.png"
+    src="https://static.opentok.com/img/homepage/tb-logo-w-description-underneath.svg"
   />
   <span>Virtual Conference</span>
   <div style="padding-left: 10px;"> {{ formattedTimeElapsed }}</div>
   <div class="spacer"></div>
-  <div class="example-button-row" *ngIf="!isButtonsHide">
+  <div class="example-button-row">
     <button mat-stroked-button [color]="videoEnabledBtnColor" (click)="startStopVideo()">
       <mat-icon *ngIf="!videoEnabled">videocam</mat-icon>
       <mat-icon *ngIf="videoEnabled">videocam_off</mat-icon>

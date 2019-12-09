@@ -1,4 +1,11 @@
-import { Component, OnInit, ViewChild, ElementRef, Input, AfterViewInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  Input,
+  AfterViewInit
+} from '@angular/core';
 import { OpentokService } from '../services/opentok.service';
 
 @Component({
@@ -7,7 +14,7 @@ import { OpentokService } from '../services/opentok.service';
   styleUrls: ['./publisher.component.scss']
 })
 export class PublisherComponent implements OnInit, AfterViewInit {
-  @ViewChild('publisherDiv', { static: false}) publisherDiv: ElementRef;
+  @ViewChild('publisherDiv', { static: false }) publisherDiv: ElementRef;
   @Input() session: OT.Session;
   @Input() publisherEmail: string;
   publisher: OT.Publisher;
@@ -40,7 +47,7 @@ export class PublisherComponent implements OnInit, AfterViewInit {
   }
 
   publish() {
-    this.session.publish(this.publisher, (err) => {
+    this.session.publish(this.publisher, err => {
       if (err) {
         alert(err.message);
       } else {
